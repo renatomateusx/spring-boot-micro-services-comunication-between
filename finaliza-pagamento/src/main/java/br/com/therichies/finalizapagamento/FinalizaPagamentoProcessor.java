@@ -12,17 +12,17 @@ import org.springframework.messaging.support.MessageBuilder;
 
 import java.util.Map;
 
-@EnableBinding({Processor.class})
+@EnableBinding({Sink.class})
 public class FinalizaPagamentoProcessor {
     private static final Logger LOGGER = LoggerFactory.getLogger(FinalizaPagamentoProcessor.class);
 
-    @StreamListener(target = Processor.INPUT, condition = "headers['notificationPriority']=='normal'")
+    @StreamListener(target = Sink.INPUT, condition = "headers['notificationPriority']=='normal'")
     public void sentEmail(Message<Map<String, Object>> paymentNotification){
         String status = String.valueOf(paymentNotification.getPayload().getOrDefault("status", "approved"));
         LOGGER.info("SEU PAGAMENTO FOI APROVADO. APROVEITE SEU PLANO DA MELHOR MANEIRA. = " + status);
     }
 
-    @StreamListener(target =Processor.INPUT, condition = "headers['notificationPriority']=='urgent'")
+    @StreamListener(target =Sink.INPUT, condition = "headers['notificationPriority']=='urgent'")
     public void sentUrgentEmail(Message<Map<String, Object>> paymentNotification){
         String status = String.valueOf(paymentNotification.getPayload().getOrDefault("status", "denied"));
         LOGGER.info("SEU PAGAMENTO NÁO FOI APROVADO. SINTO MUITO = " + status);
