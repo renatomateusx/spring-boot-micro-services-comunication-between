@@ -1,20 +1,22 @@
+server:
+  port: 8080
 spring:
   kafka:
     defaultBrokerPort: 9092
     bootstrap-servers: 'kafka:9092'
 
-cloud:
-  stream:
-    default:
-      producer: true
-    bindings:
-      output:
-        destination: 'assinatura-comunicacao'
-        binder: 'kafka'
-        content-type: application/json
-    kafka:
-      binder:
-        brokers: 'kafka:9092'
-        producer-properties:
-          key-deserializer: 'org.apache.kafka.common.serialization.StringSerializer'
-          value-deserializer: 'org.apache.kafka.common.serialization.JsonSerializer'
+  cloud:
+    stream:
+      default:
+        producer:
+          useNativeEncoding: true
+      bindings:
+        output:
+          destination: 'assinatura-comunicacao'
+          content-type: application/json
+      kafka:
+        binder:
+          brokers: 'kafka:9092'
+          producer-properties:
+            key.serializer: 'org.apache.kafka.common.serialization.StringSerializer'
+            value.serializer: 'org.springframework.kafka.support.serializer.JsonSerializer'

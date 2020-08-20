@@ -53,55 +53,56 @@ services:
             - ./cad-client:/home/cad-client
         working_dir: /home/cad-client
         ports:
-            - "80:8080"
+            - "666:8080"
         command: ["./gradlew", "bootRun"]
         depends_on:
 #          - db
           - kafka
+          - zookeeper
         restart: always
-    com-assinatura:
-        container_name: "com-assinatura"
-        image: amd64/gradle:jdk14
-        volumes:
-            - ./com-assinatura:/home/com-assinatura
-        working_dir: /home/com-assinatura
-        command: ["./gradlew", "bootRun"]
-        depends_on:
-#            - db
-            - kafka
-        restart: always
-    assinar:
-        container_name: "assinar"
-        image: amd64/gradle:jdk14
-        volumes:
-            - ./assinar:/home/assinar
-        working_dir: /home/assinar
-        ports:
-            - "8090:8080"
-        command: ["./gradlew", "bootRun"]
-        depends_on:
-#            - db
-            - kafka
-        restart: always
-    processar-pagamento:
-        container_name: "processar-pagamento"
-        image: amd64/gradle:jdk14
-        volumes:
-            - ./processar-pagamento:/home/processar-pagamento
-        working_dir: /home/processar-pagamento
-        command: ["./gradlew", "bootRun"]
-        depends_on:
-#            - db
-            - kafka
-        restart: always
-    finaliza-pagamento:
-        container_name: "finaliza-pagamento"
-        image: amd64/gradle:jdk14
-        volumes:
-            - ./finaliza-pagamento:/home/finaliza-pagamento
-        working_dir: /home/finaliza-pagamento
-        command: ["./gradlew", "bootRun"]
-        depends_on:
-#            - db
-            - kafka
-        restart: always
+#    com-assinatura:
+#        container_name: "com-assinatura"
+#        image: amd64/gradle:jdk14
+#        volumes:
+#            - ./com-assinatura:/home/com-assinatura
+#        working_dir: /home/com-assinatura
+#        command: ["./gradlew", "bootRun"]
+#        depends_on:
+##            - db
+#            - kafka
+#        restart: always
+#    assinar:
+#        container_name: "assinar"
+#        image: amd64/gradle:jdk14
+#        volumes:
+#            - ./assinar:/home/assinar
+#        working_dir: /home/assinar
+#        ports:
+#            - "8090:8080"
+#        command: ["./gradlew", "bootRun"]
+#        depends_on:
+##            - db
+#            - kafka
+#        restart: always
+#    processar-pagamento:
+#        container_name: "processar-pagamento"
+#        image: amd64/gradle:jdk14
+#        volumes:
+#            - ./processar-pagamento:/home/processar-pagamento
+#        working_dir: /home/processar-pagamento
+#        command: ["./gradlew", "bootRun"]
+#        depends_on:
+##            - db
+#            - kafka
+#        restart: always
+#    finaliza-pagamento:
+#        container_name: "finaliza-pagamento"
+#        image: amd64/gradle:jdk14
+#        volumes:
+#            - ./finaliza-pagamento:/home/finaliza-pagamento
+#        working_dir: /home/finaliza-pagamento
+#        command: ["./gradlew", "bootRun"]
+#        depends_on:
+##            - db
+#            - kafka
+#        restart: always
