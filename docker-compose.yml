@@ -1,15 +1,15 @@
 version: "3"
 services:
-    db:
-        image: mysql
-        container_name: "mysql-container"
-        command: --default-authentication-plugin=mysql_native_password
-        restart: always
-        ports:
-        - "3306:3306"
-        environment:
-            MYSQL_ROOT_PASSWORD: teste
-            MYSQL_DATABASE: teste
+#    db:
+#        image: mysql
+#        container_name: "mysql-container"
+#        command: --default-authentication-plugin=mysql_native_password
+#        restart: always
+#        ports:
+#        - "3306:3306"
+#        environment:
+#            MYSQL_ROOT_PASSWORD: teste
+#            MYSQL_DATABASE: teste
 #        volumes:
 #            - ./db/MySql:/var/lib/mysql
     zookeeper:
@@ -21,7 +21,7 @@ services:
             - ALLOW_ANONYMOUS_LOGIN=yes
     kafka:
         image: bitnami/kafka:latest
-        container_name: "kafka-server"
+        container_name: "kafka"
         ports:
             - "9092:9092"
         environment:
@@ -32,20 +32,20 @@ services:
             - ALLOW_PLAINTEXT_LISTENER=yes
         depends_on:
             - zookeeper
-    rabbit:
-        image: rabbitmq:3-management
-        container_name: "rabbitmq-server"
-        ports:
-            - "5672:5672"
-            - "15672:15672"
-        network_mode: "bridge"
-        environment:
-            - RABBITMQ_ERLANG_COOKIE=This_is_my_secret_phrase
-            - RABBITMQ_DEFAULT_USER=mqadmin
-            - RABBITMQ_DEFAULT_PASS=Admin123XX_
-            - CLUSTERED=true
-        depends_on:
-          - kafka
+#    rabbit:
+#        image: rabbitmq:3-management
+#        container_name: "rabbitmq-server"
+#        ports:
+#            - "5672:5672"
+#            - "15672:15672"
+#        network_mode: "bridge"
+#        environment:
+#            - RABBITMQ_ERLANG_COOKIE=This_is_my_secret_phrase
+#            - RABBITMQ_DEFAULT_USER=mqadmin
+#            - RABBITMQ_DEFAULT_PASS=Admin123XX_
+#            - CLUSTERED=true
+#        depends_on:
+#          - kafka
     cad-client:
         container_name: "cad-client"
         image: amd64/gradle:jdk14
@@ -56,7 +56,7 @@ services:
             - "80:8080"
         command: ["./gradlew", "bootRun"]
         depends_on:
-          - db
+#          - db
           - kafka
         restart: always
     com-assinatura:
@@ -67,7 +67,7 @@ services:
         working_dir: /home/com-assinatura
         command: ["./gradlew", "bootRun"]
         depends_on:
-            - db
+#            - db
             - kafka
         restart: always
     assinar:
@@ -80,7 +80,7 @@ services:
             - "8090:8080"
         command: ["./gradlew", "bootRun"]
         depends_on:
-            - db
+#            - db
             - kafka
         restart: always
     processar-pagamento:
@@ -91,7 +91,7 @@ services:
         working_dir: /home/processar-pagamento
         command: ["./gradlew", "bootRun"]
         depends_on:
-            - db
+#            - db
             - kafka
         restart: always
     finaliza-pagamento:
@@ -102,6 +102,6 @@ services:
         working_dir: /home/finaliza-pagamento
         command: ["./gradlew", "bootRun"]
         depends_on:
-            - db
+#            - db
             - kafka
         restart: always
