@@ -4,19 +4,27 @@ spring:
   kafka:
     defaultBrokerPort: 9092
     bootstrap-servers: 'kafka:9092'
+  datasource:
+    url: 'jdbc:mysql://mysql/teste?useSSL=false'
+    username: root
+    password: teste
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: 'org.hibernate.dialect.MySQL5InnoDBDialect'
+
 
   cloud:
     stream:
-      default:
-        producer:
-          useNativeEncoding: true
       bindings:
         output:
           destination: 'assinatura-comunicacao'
           content-type: application/json
       kafka:
         binder:
-          brokers: 'kafka:9092'
+          brokers: kafka:9092
           producer-properties:
-            key.serializer: 'org.apache.kafka.common.serialization.StringSerializer'
-            value.serializer: 'org.springframework.kafka.support.serializer.JsonSerializer'
+            key.serializer: org.apache.kafka.common.serialization.StringSerializer
+            value.serializer: org.springframework.kafka.support.serializer.JsonSerializer

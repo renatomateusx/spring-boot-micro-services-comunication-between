@@ -6,7 +6,8 @@ spring:
 cloud:
   stream:
     default:
-      producer: true
+      producer:
+        useNativeEncoding: true
     bindings:
       output:
         destination: 'assinatura-finalizar'

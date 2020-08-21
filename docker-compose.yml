@@ -2,7 +2,7 @@ version: "3"
 services:
     db:
         image: mysql
-        container_name: "mysql-container"
+        container_name: "mysql"
         command: --default-authentication-plugin=mysql_native_password
         restart: always
         ports:
@@ -12,6 +12,8 @@ services:
             MYSQL_DATABASE: teste
         volumes:
             - ./db/MySql:/var/lib/mysql
+#        volumes:
+#            - ./db/MySql:/var/lib/mysql
     zookeeper:
         image: bitnami/zookeeper:latest
         container_name: "zookeeper"
@@ -32,20 +34,6 @@ services:
             - ALLOW_PLAINTEXT_LISTENER=yes
         depends_on:
             - zookeeper
-#    rabbit:
-#        image: rabbitmq:3-management
-#        container_name: "rabbitmq-server"
-#        ports:
-#            - "5672:5672"
-#            - "15672:15672"
-#        network_mode: "bridge"
-#        environment:
-#            - RABBITMQ_ERLANG_COOKIE=This_is_my_secret_phrase
-#            - RABBITMQ_DEFAULT_USER=mqadmin
-#            - RABBITMQ_DEFAULT_PASS=Admin123XX_
-#            - CLUSTERED=true
-#        depends_on:
-#          - kafka
     cad-client:
         container_name: "cad-client"
         image: amd64/gradle:jdk14
@@ -53,7 +41,7 @@ services:
             - ./cad-client:/home/cad-client
         working_dir: /home/cad-client
         ports:
-            - "666:8080"
+            - "80:8080"
         command: ["./gradlew", "bootRun"]
         depends_on:
           - db
@@ -73,19 +61,20 @@ services:
             - kafka
             - cad-client
         restart: always
-#    assinar:
-#        container_name: "assinar"
-#        image: amd64/gradle:jdk14
-#        volumes:
-#            - ./assinar:/home/assinar
-#        working_dir: /home/assinar
-#        ports:
-#            - "8090:8080"
-#        command: ["./gradlew", "bootRun"]
-#        depends_on:
-##            - db
-#            - kafka
-#        restart: always
+    assinar:
+        container_name: "assinar"
+        image: amd64/gradle:jdk14
+        volumes:
+            - ./assinar:/home/assinar
+        working_dir: /home/assinar
+        ports:
+            - "6668:8080"
+        command: ["./gradlew", "bootRun"]
+        depends_on:
+            - db
+            - kafka
+            - com-assinatura
+        restart: always
 #    processar-pagamento:
 #        container_name: "processar-pagamento"
 #        image: amd64/gradle:jdk14
@@ -108,3 +97,4 @@ services:
 ##            - db
 #            - kafka
 #        restart: always
+
