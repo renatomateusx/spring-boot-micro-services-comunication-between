@@ -23,11 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0934bab-0f99-4ec9-ab7b-b47929fe08dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cad-client/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/cad-client/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cad-client/src/main/java/br/com/therichies/cadclient/CadClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cad-client/src/main/java/br/com/therichies/cadclient/CadClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cad-client/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cad-client/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
@@ -44,6 +43,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/cad-client">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -72,7 +74,42 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CadCliente" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/cad-client" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootRun" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -82,8 +119,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597863190447</updated>
+      <workItem from="1598011133302" duration="11789000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -95,8 +136,29 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="104" y="46" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598018135072">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="104" y="46" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.23.1920.1003/0.23.1280.777@0.23.1280.777" timestamp="1598018135072" />
+    <state width="1238" height="180" key="GridCell.Tab.0.bottom" timestamp="1598018301452">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="180" key="GridCell.Tab.0.bottom/-1920.23.1920.1003/0.23.1280.777@0.23.1280.777" timestamp="1598018301452" />
+    <state width="1238" height="180" key="GridCell.Tab.0.center" timestamp="1598018301451">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="180" key="GridCell.Tab.0.center/-1920.23.1920.1003/0.23.1280.777@0.23.1280.777" timestamp="1598018301451" />
+    <state width="1238" height="180" key="GridCell.Tab.0.left" timestamp="1598018301450">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="180" key="GridCell.Tab.0.left/-1920.23.1920.1003/0.23.1280.777@0.23.1280.777" timestamp="1598018301450" />
+    <state width="1238" height="180" key="GridCell.Tab.0.right" timestamp="1598018301451">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="180" key="GridCell.Tab.0.right/-1920.23.1920.1003/0.23.1280.777@0.23.1280.777" timestamp="1598018301451" />
     <state x="305" y="56" key="search.everywhere.popup" timestamp="1597951794080">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
