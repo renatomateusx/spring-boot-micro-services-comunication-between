@@ -1,17 +1,17 @@
 version: "3"
 services:
-#    db:
-#        image: mysql
-#        container_name: "mysql-container"
-#        command: --default-authentication-plugin=mysql_native_password
-#        restart: always
-#        ports:
-#        - "3306:3306"
-#        environment:
-#            MYSQL_ROOT_PASSWORD: teste
-#            MYSQL_DATABASE: teste
-#        volumes:
-#            - ./db/MySql:/var/lib/mysql
+    db:
+        image: mysql
+        container_name: "mysql-container"
+        command: --default-authentication-plugin=mysql_native_password
+        restart: always
+        ports:
+        - "3306:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: teste
+            MYSQL_DATABASE: teste
+        volumes:
+            - ./db/MySql:/var/lib/mysql
     zookeeper:
         image: bitnami/zookeeper:latest
         container_name: "zookeeper"
@@ -27,7 +27,7 @@ services:
         environment:
             - KAFKA_BROKER_ID=1
             - KAFKA_LISTENERS=PLAINTEXT://:9092
-            - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka-server:9092
+            - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
             - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
             - ALLOW_PLAINTEXT_LISTENER=yes
         depends_on:
@@ -56,21 +56,23 @@ services:
             - "666:8080"
         command: ["./gradlew", "bootRun"]
         depends_on:
-#          - db
+          - db
           - kafka
-          - zookeeper
         restart: always
-#    com-assinatura:
-#        container_name: "com-assinatura"
-#        image: amd64/gradle:jdk14
-#        volumes:
-#            - ./com-assinatura:/home/com-assinatura
-#        working_dir: /home/com-assinatura
-#        command: ["./gradlew", "bootRun"]
-#        depends_on:
-##            - db
-#            - kafka
-#        restart: always
+    com-assinatura:
+        container_name: "com-assinatura"
+        image: amd64/gradle:jdk14
+        volumes:
+            - ./com-assinatura:/home/com-assinatura
+        working_dir: /home/com-assinatura
+        ports:
+            - "6667:8081"
+        command: ["./gradlew", "bootRun"]
+        depends_on:
+            - db
+            - kafka
+            - cad-client
+        restart: always
 #    assinar:
 #        container_name: "assinar"
 #        image: amd64/gradle:jdk14
