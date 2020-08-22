@@ -1,7 +1,7 @@
 spring:
   kafka:
     defaultBrokerPort: 9092
-    bootstrap-servers: 'kafka:9092'
+    bootstrap-servers: '192.168.99.103:9092'
 
   cloud:
     stream:
@@ -14,7 +14,7 @@ spring:
           content-type: application/json
       kafka:
         binder:
-          brokers: 'kafka:9092'
+          brokers: '192.168.99.103:9092'
           consumer-properties:
             key-deserializer: 'org.apache.kafka.common.serialization.StringDeserializer'
             value-deserializer: 'org.apache.kafka.common.serialization.JsonDeserializer'

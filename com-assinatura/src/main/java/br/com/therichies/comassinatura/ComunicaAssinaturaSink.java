@@ -12,17 +12,9 @@ import java.util.Map;
 @EnableBinding({Sink.class})
 public class ComunicaAssinaturaSink {
     private static final Logger LOGGER = LoggerFactory.getLogger(ComunicaAssinaturaSink.class);
-    @StreamListener(target = Sink.INPUT, condition = "headers['notificationPriority']=='normal'")
+
+    @StreamListener(target = Sink.INPUT)
     public void sentEmail(Message<Map<String, Object>> paymentNotification){
-        String status = String.valueOf(paymentNotification.getPayload().getOrDefault("status", "pending"));
-        LOGGER.info("PARA VOCÊ QUE ACABOU DE SE REGISTRAR, SEGUE ALGUMAS ASSINATURAS PROMOCIONAIS = " + status);
+        LOGGER.info("PARA VOCÊ QUE ACABOU DE SE REGISTRAR, SEGUE ALGUMAS ASSINATURAS PROMOCIONAIS = " + paymentNotification);
     }
-
-    @StreamListener(target =Sink.INPUT, condition = "headers['notificationPriority']=='urgent'")
-    public void sentUrgentEmail(Message<Map<String, Object>> paymentNotification){
-        String status = String.valueOf(paymentNotification.getPayload().getOrDefault("status", "pending"));
-        LOGGER.info("VOCÊ NÃO PODE PERDER ESSA OPORTUNIDADE. PLANOS QUE CUSTAM APENAS R$1.99 = " + status);
-    }
-
-
 }

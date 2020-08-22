@@ -23,12 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0934bab-0f99-4ec9-ab7b-b47929fe08dd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cad-client/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/cad-client/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cad-client/src/main/java/br/com/therichies/cadclient/CadClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cad-client/src/main/java/br/com/therichies/cadclient/CadClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assinar/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/assinar/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cad-client/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cad-client/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com-assinatura/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/com-assinatura/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com-assinatura/src/main/java/br/com/therichies/comassinatura/ComunicaAssinaturaSink.java" beforeDir="false" afterPath="$PROJECT_DIR$/com-assinatura/src/main/java/br/com/therichies/comassinatura/ComunicaAssinaturaSink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com-assinatura/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/com-assinatura/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finaliza-pagamento/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/finaliza-pagamento/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/processar-pagamento/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/processar-pagamento/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +51,29 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cad-client" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cad-client" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cad-client" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cad-client" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -76,10 +101,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$/com-assinatura" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.com-assinatura">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -110,6 +136,62 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="cad-client [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/cad-client" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="com-assinatura" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/com-assinatura" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="booRun" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CadClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cad-client.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.therichies.cadclient.CadClientApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.com-assinatura" />
+      <item itemvalue="Gradle.CadCliente" />
+      <item itemvalue="Spring Boot.CadClientApplication" />
+      <item itemvalue="Gradle.cad-client [clean]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.cad-client [clean]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -119,7 +201,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597863190447</updated>
-      <workItem from="1598011133302" duration="11789000" />
+      <workItem from="1598011133302" duration="27864000" />
     </task>
     <servers />
   </component>
@@ -139,26 +221,39 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="104" y="46" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598018135072">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state x="104" y="44" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598035165786">
+      <screen x="0" y="23" width="1280" height="723" />
     </state>
     <state x="104" y="46" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.23.1920.1003/0.23.1280.777@0.23.1280.777" timestamp="1598018135072" />
-    <state width="1238" height="180" key="GridCell.Tab.0.bottom" timestamp="1598018301452">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state x="104" y="44" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.23.1920.1057/0.23.1280.723@0.23.1280.723" timestamp="1598035165786" />
+    <state width="1238" height="325" key="GridCell.Tab.0.bottom" timestamp="1598129130449">
+      <screen x="0" y="23" width="1280" height="723" />
     </state>
     <state width="1238" height="180" key="GridCell.Tab.0.bottom/-1920.23.1920.1003/0.23.1280.777@0.23.1280.777" timestamp="1598018301452" />
-    <state width="1238" height="180" key="GridCell.Tab.0.center" timestamp="1598018301451">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state width="1238" height="180" key="GridCell.Tab.0.bottom/-1920.23.1920.1057/0.23.1280.723@0.23.1280.723" timestamp="1598035548795" />
+    <state width="1238" height="325" key="GridCell.Tab.0.bottom/0.23.1280.723@0.23.1280.723" timestamp="1598129130449" />
+    <state width="1238" height="325" key="GridCell.Tab.0.center" timestamp="1598129130448">
+      <screen x="0" y="23" width="1280" height="723" />
     </state>
     <state width="1238" height="180" key="GridCell.Tab.0.center/-1920.23.1920.1003/0.23.1280.777@0.23.1280.777" timestamp="1598018301451" />
-    <state width="1238" height="180" key="GridCell.Tab.0.left" timestamp="1598018301450">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state width="1238" height="180" key="GridCell.Tab.0.center/-1920.23.1920.1057/0.23.1280.723@0.23.1280.723" timestamp="1598035548793" />
+    <state width="1238" height="325" key="GridCell.Tab.0.center/0.23.1280.723@0.23.1280.723" timestamp="1598129130448" />
+    <state width="1238" height="325" key="GridCell.Tab.0.left" timestamp="1598129130447">
+      <screen x="0" y="23" width="1280" height="723" />
     </state>
     <state width="1238" height="180" key="GridCell.Tab.0.left/-1920.23.1920.1003/0.23.1280.777@0.23.1280.777" timestamp="1598018301450" />
-    <state width="1238" height="180" key="GridCell.Tab.0.right" timestamp="1598018301451">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state width="1238" height="180" key="GridCell.Tab.0.left/-1920.23.1920.1057/0.23.1280.723@0.23.1280.723" timestamp="1598035548793" />
+    <state width="1238" height="325" key="GridCell.Tab.0.left/0.23.1280.723@0.23.1280.723" timestamp="1598129130447" />
+    <state width="1238" height="325" key="GridCell.Tab.0.right" timestamp="1598129130448">
+      <screen x="0" y="23" width="1280" height="723" />
     </state>
     <state width="1238" height="180" key="GridCell.Tab.0.right/-1920.23.1920.1003/0.23.1280.777@0.23.1280.777" timestamp="1598018301451" />
+    <state width="1238" height="180" key="GridCell.Tab.0.right/-1920.23.1920.1057/0.23.1280.723@0.23.1280.723" timestamp="1598035548794" />
+    <state width="1238" height="325" key="GridCell.Tab.0.right/0.23.1280.723@0.23.1280.723" timestamp="1598129130448" />
+    <state x="341" y="23" width="626" height="723" key="find.popup" timestamp="1598127538142">
+      <screen x="0" y="23" width="1280" height="723" />
+    </state>
+    <state x="341" y="23" width="626" height="723" key="find.popup/0.23.1280.723@0.23.1280.723" timestamp="1598127538142" />
     <state x="305" y="56" key="search.everywhere.popup" timestamp="1597951794080">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
