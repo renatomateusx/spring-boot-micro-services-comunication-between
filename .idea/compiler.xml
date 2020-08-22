@@ -10,5 +10,10 @@
         <module name="cad-client.main" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cad-client" target="14" />
+      <module name="cad-client.main" target="14" />
+      <module name="cad-client.test" target="14" />
+    </bytecodeTargetLevel>
   </component>
 </project>
