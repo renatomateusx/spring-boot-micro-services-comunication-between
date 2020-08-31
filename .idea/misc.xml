@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-<<<<<<< HEAD
-=======
-  <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/cad-client" />
-  </component>
->>>>>>> d3b0c2861eaeefb9eddb41ad0a951f2756d231c1
   <component name="ProjectRootManager" version="2" project-jdk-name="14" project-jdk-type="JavaSDK" />
 </project>

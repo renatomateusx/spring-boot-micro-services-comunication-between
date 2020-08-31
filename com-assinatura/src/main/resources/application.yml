@@ -11,8 +11,20 @@ spring:
           json:
             trusted:
               packages: '*'
-
-
+  mail:
+    host: smtp.gmail.com
+    username: leonardo.amaral.sousa@gmail.com
+    password: ZGPmgq2468
+    properties:
+      mail:
+        smtp:
+          port: 587
+          auth: true
+          transport:
+            protocol: smtp
+          starttls:
+            enable: true
+            required: true
   cloud:
     stream:
       default:

@@ -10,10 +10,6 @@ services:
         environment:
             MYSQL_ROOT_PASSWORD: teste
             MYSQL_DATABASE: teste
-        volumes:
-            - ./db/MySql:/var/lib/mysql
-#        volumes:
-#            - ./db/MySql:/var/lib/mysql
     zookeeper:
         image: bitnami/zookeeper:latest
         container_name: "zookeeper"

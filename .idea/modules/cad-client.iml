@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
-  <component name="ExternalSystem" externalSystem="GRADLE" externalSystemModuleGroup="br.com.therichies" externalSystemModuleVersion="0.0.1-SNAPSHOT" linkedProjectId="cad-client" linkedProjectPath="$MODULE_DIR$/../../cad-client" rootProjectPath="$MODULE_DIR$/../../cad-client" />
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../cad-client">
+      <excludeFolder url="file://$MODULE_DIR$/../../cad-client/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../cad-client/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
 </module>

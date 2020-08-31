@@ -1,5 +1,7 @@
-package br.com.therichies.cadclient;
+package br.com.therichies.cadclient.controllers;
 
+import br.com.therichies.cadclient.services.CadClienteService;
+import br.com.therichies.cadclient.domains.dtos.ClientDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +11,7 @@ import javax.validation.Valid;
 import java.net.URI;
 
 @RestController
-@RequestMapping("/api/clientes")
+@RequestMapping("/api/clients")
 public class CadClientController {
 
     @Autowired
@@ -19,7 +21,7 @@ public class CadClientController {
     public ResponseEntity<?> cadClientRequest(@Valid @RequestBody final ClientDto requestCadClient){
         URI location = ServletUriComponentsBuilder.fromCurrentContextPath()
                 .path("/api/clientes/{id}")
-                .build(service.insert(requestCadClient));
+                .build(service.insert(requestCadClient).getId());
 
         return ResponseEntity.created(location).build();
 

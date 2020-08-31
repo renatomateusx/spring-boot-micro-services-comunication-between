@@ -1,13 +1,10 @@
-package br.com.therichies.cadclient;
+package br.com.therichies.cadclient.intregation.kafka;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import br.com.therichies.cadclient.domains.dtos.ClientDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.messaging.support.MessageBuilder;
-
-import java.util.Map;
 
 @RequiredArgsConstructor
 @EnableBinding({Source.class})
